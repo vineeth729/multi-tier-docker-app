@@ -65,22 +65,26 @@ cd multi-tier-docker-app
 # Deploy the app
 sudo docker-compose up --build -d
 ```
+## 🔓 Exposed Ports
 | Component | Port | Description              |
 | --------- | ---- | ------------------------ |
 | Frontend  | 8080 | Public access via Nginx  |
 | API       | 5000 | Flask REST API           |
 | Database  | 5432 | Internal PostgreSQL port |
 
-multi-tier-docker-app/
-├── api/
-│   ├── app.py
-│   ├── Dockerfile
-│   └── requirements.txt
-├── frontend/
-│   ├── Dockerfile
-│   └── index.html
-├── docker-compose.yml
-└── README.md
+## 🗂️ Folder Structure
 
+```text
+multi-tier-docker-app/
+├── api/                    # Backend Flask API
+│   ├── app.py              # Main Flask application
+│   ├── Dockerfile          # Dockerfile for building the API image
+│   └── requirements.txt    # Python dependencies
+├── frontend/               # Frontend served by Nginx
+│   ├── Dockerfile          # Dockerfile for building the frontend image
+│   └── index.html          # Static HTML page
+├── docker-compose.yml      # Docker Compose configuration
+└── README.md               # Project documentation
+```
 
 
